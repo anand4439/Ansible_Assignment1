@@ -3,10 +3,10 @@ ad hoc commands
 
 commands:
 
-# for creating the group
+#for creating the group
 ansible web -i inventory.ini -m group -a "name=team1 state=present" --become
 
-# for adding a user into a group with home dir 
+#for adding a user into a group with home dir 
 ansible all -i inventory.ini -m user -a "name=nitish groups=team1 append=yes state=present create_home=yes shell=/bin/bash" --become
 
 #provide the permissions
